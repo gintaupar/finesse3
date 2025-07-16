@@ -1,0 +1,172 @@
+\ProvidesFile{finesse}
+%\RequirePackage{amstex}
+
+\def\thedate{\number\day\ \ifcase\month\or Jan\or Feb\or Mar\or Apr\or  May\or Jun\or Jul\or Aug\or Sep\or Oct\or Nov\or Dec\fi\ \number\year}
+
+\newcommand{\hop}{\vspace{0.5cm}}
+\newcommand{\hhop}{\vspace{1cm}}
+
+\newcommand{\AEI}{Albert-Einstein-Institut\xspace}
+\newcommand{\VIRGO}{\textsc{VIRGO}\xspace}
+\newcommand{\LIGO}{\textsc{LIGO}\xspace}
+\newcommand{\FP}{Fabry-Perot\xspace}
+\newcommand{\Co}{\tt\small}
+\newcommand{\cmd}[1]{\texttt{\small #1}\xspace}
+\newcommand{\degrees}{^\circ\xspace}
+
+\newcommand{\w}{\ensuremath{\omega}}
+\newcommand{\mmu}{\ensuremath{\mu}}
+\newcommand{\wh}{\ensuremath{\widehat{\omega}}}
+\newcommand{\wb}{\ensuremath{\bar{\omega}}}
+\newcommand{\I}{\ensuremath{{\rm i}\,}}
+\newcommand{\T}{\ensuremath{\,t}}
+\newcommand{\N}{\rm I\!N }
+\newcommand{\shot}{shot noise\xspace}
+\newcommand{\GEO}{GEO\,600\xspace}
+\newcommand{\FI}{Faraday isolator}
+\newcommand{\Mi}{Michelson interferometer\xspace}
+\newcommand{\HG}{Hermite-Gauss\xspace}
+\newcommand{\fig}[1]{Figure~\ref{#1}}
+\newcommand{\tab}[1]{Table~\ref{#1}}
+\newcommand{\eq}[1]{Equation~\ref{#1}}
+\newcommand{\chap}[1]{Chapter~\ref{#1}}
+\newcommand{\Sec}[1]{Section~\ref{#1}}
+\newcommand{\app}[1]{Ap\-pen\-dix~\ref{#1}}
+\newcommand{\zr}{\ensuremath{z_{\rm R}}}
+\newcommand{\M}[1]{\ensuremath{{\rm TEM}_{#1}}}
+\newcommand{\bs}{beam splitter\xspace}
+\newcommand{\bss}{beam splitters\xspace}
+\newcommand{\gw}{gravitational wave\xspace}
+\newcommand{\gws}{gravitational waves\xspace}
+\newcommand{\FHWM}{\ensuremath{{\rm FHWM}}}
+\newcommand{\myRe}[1]{\ensuremath{{\rm Re}\left\{ #1 \right\} }}
+\newcommand{\myIm}[1]{\ensuremath{{\rm Im}\left\{{#1}\right\}}}
+\newcommand{\mEx}[1]{\ensuremath\exp{\left(#1\right)}}
+\newcommand{\mExB}[1]{\ensuremath\exp{\Bigl(#1\Bigr)}}
+\newcommand{\mCosB}[1]{\ensuremath\cos{\Bigl(#1\Bigr)}}
+\newcommand{\mCos}[1]{\ensuremath\cos{\left(#1\right)}}
+\newcommand{\mSin}[1]{\ensuremath\sin{\left(#1\right)}}
+\newcommand{\mFSR}{\ensuremath\rm FSR}
+\newcommand{\mFWHM}{\ensuremath\Delta f}
+\newcommand{\Tun}{\ensuremath \phi}
+\newcommand{\OPh}{\ensuremath \varphi}
+\newcommand{\DMod}{\ensuremath \theta}
+\newcommand{\hwh}{\ensuremath{\rm Hz/\sqrt{\rm Hz}}}
+\newcommand{\Xwh}{\ensuremath{/\sqrt{\rm Hz}}}
+\newcommand{\WT}[1]{\ensuremath{\widetilde{#1}}}
+\newcommand{\Fin}{\ensuremath{{\cal F}}}
+\newcommand{\Liso}{\textsc{Liso}\xspace}
+\newcommand{\OptoCad}{\textsc{OptoCad}\xspace}
+\newcommand{\Siesta}{\textsc{Siesta}\xspace}
+\newcommand{\EEE}{\textsc{E2E}\xspace}
+\newcommand{\Finesse}{\textsc{Finesse}\xspace}
+\newcommand{\Luxor}{\textsc{Luxor}\xspace}
+\newcommand{\LCO}{\ensuremath{\overline{L}}}
+\newcommand{\LD}{\ensuremath{\Delta L}}
+\newcommand{\pwa}{plane-wave approximation\xspace}
+\newcommand{\etal}{et~al.}
+\newcommand{\roc}{\ensuremath{R_{\rm C}}}
+\newcommand{\grad}{\ensuremath{{\rm grad}}}
+
+\newcommand{\SSt}{\scriptscriptstyle}
+\newcommand{\St}{\scriptstyle}
+\newcommand{\Dt}{\displaystyle}
+\newcommand{\SSm}{\scriptscriptstyle\rm}
+\newcommand{\Sm}{\scriptstyle\rm}
+\newcommand{\Dm}{\displaystyle\rm}
+
+\newcommand{\Mylong}{\vspace{\baselineskip}}
+\newcommand{\Myshort}{\enlargethispage*{\baselineskip}}
+\newcommand{\Myxshort}{\enlargethispage*{1.5\baselineskip}}
+\newcommand{\MyXshort}{\enlargethispage*{2.5\baselineskip}}
+
+\let\0\enskip
+
+
+% bib
+
+\newcommand{\Oamaldi}[1]{Class.~Quantum Grav.~{21} #1 (2003)}
+\newcommand{\amaldi}[1]{Class.~Quantum Grav.~{19} #1 (2002)}
+\newcommand{\Amaldi}{Class.~Quantum Grav.~{\bf 19}}
+\newcommand{\adf}{A.~Freise}
+\newcommand{\waw}{W.~Winkler}
+\newcommand{\ghh}{G.~Heinzel}
+\newcommand{\hrg}{H.~Grote}
+\newcommand{\sfg}{S.~Gossler}
+\newcommand{\hal}{H.~L\"uck}
+\newcommand{\bfw}{B.~Willke}
+\newcommand{\kvd}{K.~Danzmann}
+\newcommand{\ken}{K.A.~Strain}
+\newcommand{\dir}{D.I.~Robertson}
+\newcommand{\mmc}{M.M.~Casey}
+\newcommand{\harry}{H.~Ward}
+\newcommand{\jim}{J.~Hough}
+
+\setcounter{topnumber}{999}
+\setcounter{bottomnumber}{999}
+\setcounter{totalnumber}{999}
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\bottomfraction}{1.0}
+\renewcommand{\textfraction}{0.0}
+\renewcommand{\floatpagefraction}{.1}
+
+%\enlargethispage*{\baselineskip}
+
+% OLJ :
+%\setlength{\mathindent}{1cm}
+%\setlength{\parskip}{\baselineskip}
+%\setlength{\parsep}{0pt}
+%\setlength{\parindent}{0pt}
+%\setlength{\topsep}{-8pt}
+%\doitemsep
+
+%% technisches
+\newcommand{\notes}[1]{\marginpar{\begin{sloppy}{\tiny #1}\end{sloppy}\hfill}}
+\renewcommand{\notes}[1]{}
+\newcommand{\name}[1]{\textsc{#1}}
+\newcommand{\nfrac}[2]{\leavevmode\kern.1em\raise.5ex\hbox{\scriptsize\ensuremath{#1}}\kern-.1em/\kern-.15em\lower.25ex\hbox{\scriptsize \ensuremath{#2}}}
+\newcommand{\figtext}{\fontsize{14pt}{14pt}\sffamily\selectfont }
+\newcommand{\numeq}[2]{\ensuremath{ \left(\frac{\text{#1}}{\text{#2}}\right)}}
+
+\newcommand{\mylinebreak}[1][4]{\linebreak[#1]}
+%\newcommand{\mylinebreak}[1][4]{}
+%% Abkuerzungen
+\newcommand{\gref}[1]{\mbox{Gl.\,(\ref{#1})}}
+\newcommand{\aref}[1]{\mbox{Abb.\,(\ref{#1})}}
+\newcommand{\SQL}{{\text{SQL}}\xspace}
+\newcommand{\QND}{{\text{QND}}\xspace}
+
+%%% mathematik
+\newcommand{\falt}[2]{\ensuremath{({#1}*{#2})}}
+\newcommand{\inflim}{\limits_{-\infty}^{\infty}}
+\newcommand{\Idiff}[1]{\mathrm{d}{#1}}
+\newcommand{\myint}[2]{\ensuremath{\int\limits_{#1}^{#2}}}
+
+\newcommand{\Fourier}[1]{\ensuremath{\mathfrak{F}\lbrace#1\rbrace}}
+\newcommand{\IFourier}[1]{\ensuremath{\mathfrak{F}^{-1}\lbrace#1\rbrace}}
+\newcommand{\ifrac}[1]{\ensuremath{\frac{1}{#1}}}
+
+\newcommand{\SD}[1]{\ensuremath{S_{#1}(f)}}
+\newcommand{\mHz}{\ensuremath{\frac{\text{m}}{\sqrt{\text{Hz}}}}}
+\newcommand{\textmHz}{\ensuremath{\text{m}}/{\sqrt{\text{Hz}}}}
+\newcommand{\kb}{\ensuremath{k_{\text{B}}}}
+\newcommand{\Abs}[1]{\ensuremath{\left|#1\right|^2}}
+\newcommand{\abs}[1]{\ensuremath{\left|#1\right|}}
+\renewcommand{\Im}{\mathop{\mathrm{Im}}}
+\renewcommand{\Re}{\mathop{\mathrm{Re}}}
+\newcommand{\frc}{\operatorname{frac}}
+
+\newcommand{\defeq}{\overset{\text{def}}{=}}
+
+\newcommand{\atx}[1]{\!\bigl\arrowvert{#1}}
+\newcommand{\timeave}[1]{\langle #1 \rangle_t}
+\newcommand{\qm}[1]{\langle #1 \rangle}
+\newcommand{\komm}[2]{[ #1,#2 ]}
+\newcommand{\im}{\text{i}}    % sqrt{-1}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
+
+% vim: expandtab shiftwidth=4:

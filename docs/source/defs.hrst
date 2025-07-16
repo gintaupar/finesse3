@@ -1,0 +1,15 @@
+.. role:: raw-latex(raw)
+   :format: latex
+
+.. role:: raw-html(raw)
+   :format: html
+
+.. |Finesse| replace:: :raw-html:`F<span style="font-variant: small-caps;">inesse</span>`:raw-latex:`{\Finesse}`
+
+.. |GEO600| replace:: :raw-html:`GEO 600`:raw-latex:`{GEO\,600}`
+
+.. role:: python(code)
+   :language: python
+
+.. role:: rst(code)
+   :language: rst
